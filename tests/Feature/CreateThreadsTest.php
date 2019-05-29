@@ -29,7 +29,7 @@ class CreateThreadsTest extends TestCase
         $this->actingAs(factory('App\User')->create());
 
         // When we hit the endpoint to create a new thread.
-        $thread = factory('App\Thread')->make();
+        $thread = factory('App\Thread')->create();
 
         $this->post('/threads', $thread->toArray());
         // Then, when we visit the thread page.
